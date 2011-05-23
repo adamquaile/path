@@ -15,10 +15,10 @@ void getCurrentDirectory(char *directory, size_t size) {
     getcwd(directory, size);
 }
 
-void addToPath(char *path) {
-	
-}
-void resolvePath(char *path) {
-	
-}
+// void addToPath(char *path) {
+// 	
+// }
+// void resolvePath(char *path) {
+// 	
+// }
 

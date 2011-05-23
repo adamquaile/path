@@ -8,8 +8,6 @@ Usage
 
 At present the usage is simple, but likely to change. The simplest examples (and most commonly used) are `path add .` and `path add /some/path/`.
 
-	printf(\
-	
 	Usage: path [command [options] filename] 
 	
 		Running with no command or filename, shows this help message.
