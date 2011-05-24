@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdio.h>
-#include <string>
+#include <string.h>
 	using std::string;
 
 
@@ -10,11 +10,14 @@
 #if defined(__WIN7__) 
 	#include "platforms/win7.cpp"
 #endif
+#if defined(__UBUNTU1104__)
+	#include "platforms/ubuntu1104.cpp"
+#endif
 
 
 void printUsage() {
 	
-	char* stLiteral = "Treat the directory . as literal - doesn't resolve before adding to PATH";
+	string stLiteral = "Treat the directory . as literal - doesn't resolve before adding to PATH";
 
 	printf(\
 "\n\
@@ -37,7 +40,7 @@ Usage: %s [command [options] filename] \n\
 		--literal: %s\
 	\n\
 "\
-, COMMAND_NAME, stLiteral);
+, COMMAND_NAME, stLiteral.c_str());
 }
 
 int main(int argc, char* argv[]) {	
@@ -74,9 +77,9 @@ int main(int argc, char* argv[]) {
 	// Here, we should know everything we need to
 	if (cAdd) {
 		if (opLiteral) {
-			addToPath(filename);
+//			addToPath(filename);
 		} else {
-			addToPath(resolvePath(filename));
+//			addToPath(resolvePath(filename));
 		}
 	}
 	
